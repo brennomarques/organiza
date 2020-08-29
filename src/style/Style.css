@@ -1,0 +1,22 @@
+/******DEFINIÇÃO DE FONTES*******/
+@font-face { 
+    font-family: 'Branding-Bold';
+    src: url('./sources/Branding-Bold.otf')
+}
+@font-face { 
+    font-family: 'Branding-Light';
+    src: url('./sources/Branding-Light.otf');
+}
+@font-face { 
+    font-family: 'Branding-Medium';
+    src: url('./sources/Branding-Medium.otf');
+}
+@font-face { 
+    font-family: 'Branding-MediumItalic';
+    src: url('./sources/Branding-MediumItalic.otf');
+}
+@font-face { 
+    font-family: 'Branding-LightItalic';
+    src: url('./sources/Branding-LightItalic.otf');
+}
+/******FFIM DA DEFINIÇÃO DE FONTES*******/

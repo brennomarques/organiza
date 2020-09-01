@@ -10,19 +10,6 @@
 
         <div class="col-12 col-md-6">
 
-            <div class="row">
-              <div class="col col-md-12">
-
-                <div class="float-left">
-                  <img src="@/img/page/adicionar.png" class="custom_img" width="35">
-                </div>
-                <div class="float-left">
-                  <p class="custom_link_upload ml-2">Clique e adicione documento</p>  
-                </div>
-              </div>
-            </div>
-            <Upload/><Upload/>
-            <hr class="custom_linha">
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="inputPassword4">CNPJ*</label>
@@ -39,9 +26,26 @@
               </div>
             </div>
             <hr class="custom_linha">
+            <div class="row">
+              <div class="col col-md-12">
+                <div class="float-left">
+                  <img src="@/img/page/adicionar.png" class="custom_img" width="35">
+                </div>
+                <div class="float-left">
+                  <p class="custom_link_upload ml-2">Clique e adicione o contrato</p>  
+                </div>
+              </div>
+            </div>
+
+            <Upload/><Upload/>       
+
+            <hr class="custom_linha">
             <div class="form-row mt-5">
               <div class="form-group col-md-5">
-                <button class="btn btn-customization btn-lg btn-block">Adicionar pessoa envolvida</button>
+                <button class="btn btn-customization btn-lg btn-block">
+                  <i class="fa fa-plus"></i>
+                  Pessoa envolvida
+                </button>
               </div>
             </div>   
             <ResponsiblePerson/>       
@@ -82,7 +86,7 @@ export default {
 }
 .custom_link_upload{
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 1.5rem;
     cursor: pointer;
     position: static;
 }
@@ -100,7 +104,6 @@ export default {
     color: #FFFFFF;
     background-color: #3ecb90;
     border-color: #3ecb90;
-    
     font-size: 20px;
 }
 .btn-customization:hover{

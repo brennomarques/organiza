@@ -4,8 +4,8 @@
         <div class="col-12 col-md-10 mb-3 bg-light">
             <button class="round-button">X</button>
             <div class="">
-                <label class="mb-0">Contrato de aluguel do carro UP!.pdf</label>
-                <p>621.3 KB</p>                
+                <label class="font_title_upload mb-0">Contrato de aluguel do carro UP!.pdf</label>
+                <p class="font_size_calc">Tamaho: 621.3 KB</p>                
             </div>
         </div>
 
@@ -20,6 +20,13 @@ export default {
 </script>
 
 <style scoped>
+    .font_size_calc{
+        font-size: 13px;
+        color: #6c757d!important;
+    }
+    .font_title_upload{
+        color: #212529;
+    }
     .round-button {
         width:20px;
         height:20px;

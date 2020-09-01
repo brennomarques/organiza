@@ -37,19 +37,19 @@ export default {};
 
 <style scoped>
     .round-button {
-        width:25px;
-        height:25px;
+        width:20px;
+        height:20px;
         border: #3ecb90;
         border-radius: 50%;
         color:#f5f5f5;
         text-align:center;
         background: #3ecb90;
-        font-size:15px;
+        font-size:10px;
         font-weight:bold;
         cursor: pointer;
         position: absolute;
-        right: -10px;
-        top: -10px;
+        right: -5px;
+        top: -5px;
         z-index: 2;
     }
     .round-button:hover {

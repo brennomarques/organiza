@@ -58,7 +58,7 @@
                 <div class="form-group col-md-4 offset-md-4">
                     <button class="btn btn-customization_oco btn-lg btn-block">Consultar</button>
                 </div>
-          </div>       
+            </div>       
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center">
           <figure class>

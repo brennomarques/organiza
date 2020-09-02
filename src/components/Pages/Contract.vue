@@ -14,7 +14,7 @@
               <div class="form-group col-md-4">
                 <label for="inputPassword4">CNPJ*</label>
                 <div class="input-group-prepend">
-                  <input type="number" class="form-control" v-model="cnpj" placeholder="Insira o CNPJ aqui" />
+                  <input type="number" class="form-control" placeholder="Insira o CNPJ aqui" />
                   <button class="ml-1 btn _btn_go">
                     <i class="fa fa-search"></i>
                   </button>
@@ -22,7 +22,7 @@
               </div>
               <div class="form-group col-md-8">                
                 <label for="inputEmail4">Razão social</label>
-                <input type="text" class="form-control" v-model="company_name" placeholder="Insira o nome aqui"/>
+                <input type="text" class="form-control" placeholder="Insira o nome aqui"/>
               </div>
             </div>
             <hr class="custom_linha">
@@ -40,15 +40,9 @@
             <Upload/><Upload/>       
 
             <hr class="custom_linha">
-            <div class="form-row mt-5">
-              <div class="form-group col-md-5">
-                <button class="btn btn-customization btn-lg btn-block">
-                  <i class="fa fa-plus"></i>
-                  Pessoa envolvida
-                </button>
-              </div>
-            </div>   
-            <ResponsiblePerson/>       
+            
+            <ResponsiblePerson/>
+
             <hr class="custom_linha">
             <div class="form-row mt-5">
               <div class="form-group col-md-5">
@@ -66,7 +60,7 @@
 import ResponsiblePerson from '../Pages/ResponsiblePerson'
 import Upload from '../Pages/UploadDoc'
 export default {
-  components:{ResponsiblePerson, Upload}
+  components:{ResponsiblePerson, Upload},
 };
 </script>
 

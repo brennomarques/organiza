@@ -13,6 +13,7 @@ import Contract from '../components/Pages/Contract'
 import Help from '../components/Pages/Help'
 import Home from '../components/Menu-pages/Home'
 import TypeService from '../components/Pages/TypeService'
+import Certificadoa3 from '../components/Pages/CertificadoA3'
 
 
 Vue.use(VueRouter)
@@ -63,6 +64,10 @@ Vue.use(VueRouter)
   {
     path: '/home',
     component: Home
+  },
+  {
+    path: '/a3',
+    component: Certificadoa3
   },
 
 

@@ -10,7 +10,7 @@
                       <div class="form-group col-md-4">
                         <label for="inputPassword4" class="custom_cor_font">CNPJ*</label>
                         <div class="input-group-prepend">
-                          <input type="number" class="form-control" v-model="cnpj" placeholder="Insira o CNPJ aqui" />
+                          <input type="number" class="form-control" placeholder="Insira o CNPJ aqui" />
                           <button class="ml-1 btn _btn_go">
                             <i class="fa fa-search"></i>
                           </button>
@@ -18,7 +18,7 @@
                       </div>
                       <div class="form-group col-md-6">                
                         <label for="inputEmail4" class="custom_cor_font">Razão social</label>
-                        <input type="text" class="form-control" v-model="company_name" placeholder="Insira o nome aqui"/>
+                        <input type="text" class="form-control" placeholder="Insira o nome aqui"/>
                       </div>
 
                       <div class="form-group col-md-2">

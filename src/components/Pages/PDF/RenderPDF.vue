@@ -15,7 +15,20 @@
                     </div>                      
                 </div>
             <div class="modal-body">
+                    <!-- <pdf src="@/img/Lorem_ipsum.pdf"></pdf> -->
                 dfdfdfdf
+                <template>
+                    <div>
+                        {{currentPage}} / {{pageCount}}
+                        <pdf
+                            src=""
+                            @num-pages="pageCount = $event"
+                            @page-loaded="currentPage = $event"
+                        ></pdf>
+                    </div>
+                </template>
+                
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -29,7 +42,17 @@
 <script>
 
 
+import pdf from 'vue-pdf'
 export default {
+    components: {
+        pdf
+    },
+    data() {
+        return {
+            currentPage: 0,
+            pageCount: 0,
+        }
+    }
     
 }
 </script>

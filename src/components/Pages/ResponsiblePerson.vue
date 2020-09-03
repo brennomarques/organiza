@@ -2,7 +2,7 @@
   <section class="container mt-3">
     
     <div class="row">
-      <div class="col-12 col-md-5 mb-3">
+      <div class="col-12 col-md-5 mb-3" v-on="chamavuex()">
         <button class="btn btn-customization btn-lg btn-block" @click="eAdd()">
         <i class="fa fa-plus"></i>
           Pessoa envolvida
@@ -20,11 +20,11 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label>Nome</label>
-              <input type="text" class="form-control" v-model="pessoas.nome" placeholder="Insira o nome aqui" />
+              <input type="text" class="form-control" v-model="pessoa.nome" placeholder="Insira o nome aqui" />
             </div>
             <div class="form-group col-md-4">
               <label>Responsabilidades</label>
-              <select class="custom-select" v-model="pessoas.responsabilidade">
+              <select class="custom-select" v-model="pessoa.responsabilidade">
                 <option selected>---Selecione---</option>
                 <option>Sócio</option>
                 <option>Administrador</option>
@@ -35,7 +35,7 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-10">
-              <input type="text" class="form-control" v-model="pessoas.obs" placeholder="Digite observação aqui." />
+              <input type="text" class="form-control" v-model="pessoa.obs" placeholder="Digite observação aqui." />
             </div>
           </div>
         </div>
@@ -64,9 +64,14 @@ export default {
         responsabilidade: '',
         obs: ''
       });
+      this.$store.state.dadosPessoas=this.pessoas
     },
     eRemove(pessoa) {
       this.pessoas = this.pessoas.filter(u => u !== pessoa);
+      this.$store.state.dadosPessoas = this.pessoas
+    },
+    chamavuex(){
+      this.$store.state.dadosPessoas=this.pessoas
     }
   }
 };

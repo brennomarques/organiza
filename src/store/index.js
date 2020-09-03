@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     service: '', //guarda o serviço selecionado
-    solicitation: '' //pega a solitação
+    solicitation: '', //pega a solitação
+    dadosPessoas:[],
   },
   mutations: {
   },

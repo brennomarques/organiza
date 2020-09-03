@@ -14,7 +14,7 @@
               <div class="form-group col-md-4">
                 <label for="inputPassword4">CNPJ*</label>
                 <div class="input-group-prepend">
-                  <input type="number" class="form-control" placeholder="Insira o CNPJ aqui" />
+                  <input type="number" v-model="cnpj" class="form-control" placeholder="Insira o CNPJ aqui"/>
                   <button class="ml-1 btn _btn_go">
                     <i class="fa fa-search"></i>
                   </button>
@@ -22,31 +22,21 @@
               </div>
               <div class="form-group col-md-8">                
                 <label for="inputEmail4">Razão social</label>
-                <input type="text" class="form-control" placeholder="Insira o nome aqui"/>
+                <input type="text" v-model="razao" class="form-control" placeholder="Insira o nome aqui"/>
               </div>
             </div>
             <hr class="custom_linha">
-            <div class="row">
-              <div class="col col-md-12">
-                <div class="float-left">
-                  <img src="@/img/page/adicionar.png" class="custom_img" width="35">
-                </div>
-                <div class="float-left">
-                  <p class="custom_link_upload ml-2">Clique e adicione o contrato</p>  
-                </div>
-              </div>
-            </div>
 
-            <Upload/><Upload/>       
+            <Upload/>       
 
             <hr class="custom_linha">
             
             <ResponsiblePerson/>
-
+            valor:{{eDadosPessoa()}}
             <hr class="custom_linha">
             <div class="form-row mt-5">
               <div class="form-group col-md-5">
-                <button class="btn btn-customization btn-lg btn-block">Salvar</button>
+                <button class="btn btn-customization btn-lg btn-block" @click="eSaveData()">Salvar</button>
               </div>
             </div> 
         </div>
@@ -57,10 +47,31 @@
 </template>
 
 <script>
+
 import ResponsiblePerson from '../Pages/ResponsiblePerson'
 import Upload from '../Pages/UploadDoc'
+
 export default {
   components:{ResponsiblePerson, Upload},
+  data(){
+    return{
+      cnpj:'',
+      razao:''
+    }
+  },  
+  methods:{
+    eDadosPessoa(){
+      return this.$store.state.dadosPessoas
+    },
+    eSaveData(){
+      if(this.cnpj == ''){
+        console.log('Informe o CNPJ!')
+      }else{
+        console.log('Faz: '+this.cnpj+':'+this.razao)
+      }
+    }
+    
+  }
 };
 </script>
 
